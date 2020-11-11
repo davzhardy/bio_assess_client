@@ -2,7 +2,7 @@
 
 Before running the client please set up the [backend server](https://github.com/davzhardy/bio_assess_server)
 
-In the project directory run 
+After the server is up and running, in the project directory run 
 
 ```
 npm install 
