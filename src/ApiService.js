@@ -1,4 +1,5 @@
-const BASE_URL = 'http://localhost:3001';
+const PORT = 3001;
+const BASE_URL = `http://localhost:${PORT}`;
 
 function getMazeOutput (instructions) {
   return fetchRequest('/instructions', {
