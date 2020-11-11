@@ -9,7 +9,7 @@ import ApiService from '../../ApiService';
 function MainScreen () {
 
   const [output, setOutput] = useState('');
-  const [instructions, setInstructions] = useState('n, w');
+  const [instructions, setInstructions] = useState('');
 
   function createInstructions (string) {
     ApiService.getMazeOutput({
@@ -20,8 +20,15 @@ function MainScreen () {
 
   function handleSubmit (e) {
     e.preventDefault();
-    createInstructions(instructions);
-    setInstructions('');
+    const badinputs = instructions.replace(/[, nwes]+/ig, "");
+    if (badinputs.length) {
+      setOutput('Please only submit the following characters "n", "w", "e", "s"')
+    } else if (instructions.length) {
+      const serverInput = instructions.replace(/[, ]+/g, ",").trim();
+      createInstructions(serverInput);
+      setInstructions('');
+    }
+    else setOutput('Please enter instructions before submitting');
   }
 
   return (
