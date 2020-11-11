@@ -5,8 +5,8 @@ import './index.style.scss';
 function Header () {
 
   return (
-    <div>
-      <p>Header</p>
+    <div className="header">
+      <h1>Welcome to the Destroy Da One Ring game</h1>
     </div>
   );
 };
