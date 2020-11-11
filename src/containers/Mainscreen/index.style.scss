@@ -1,4 +1,18 @@
 .main-container {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.instructions-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 10px 1px #3333;
+  border-radius: 5px;
+  background-color: white;
+  width: 60%;
+  margin: 20px;
 }

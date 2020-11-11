@@ -22,7 +22,7 @@ function MainScreen () {
     e.preventDefault();
     const badinputs = instructions.replace(/[, nwes]+/ig, "");
     if (badinputs.length) {
-      setOutput('Please only submit the following characters "n", "w", "e", "s"')
+      setOutput('Please only submit the following characters "n", "w", "e", "s"');
     } else if (instructions.length) {
       const serverInput = instructions.replace(/[, ]+/g, ",").trim();
       createInstructions(serverInput);
@@ -34,10 +34,10 @@ function MainScreen () {
   return (
     <div className="main-container">
       <Header/>
-      <div>
+      <div className="instructions-container">
         <h2>Instructions</h2>
         <p>Simply type in movements below and hit the submit button.</p>
-        <p>Accepted Movements</p>
+        <p>Accepted Movements:</p>
         <ul>
           <li>n for north or up</li>
           <li>s for south or down</li>

@@ -1,0 +1,25 @@
+button {
+  background-color: #2F80ED;
+  color: white;
+  border: #2F80ED;
+  cursor: pointer;
+  width: 60%;
+  height: 25px;
+  min-width: 50px;
+  box-shadow: 0 0 10px 1px #3333;
+  border-radius: 5px;
+  margin: 20px;
+
+  &:hover {
+  background-color: rgba(29, 53, 87, 0.7);
+  }
+
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  width: 100%;
+}
