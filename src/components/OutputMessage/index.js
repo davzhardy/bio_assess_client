@@ -1,20 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import ApiService from '../../ApiService';
+import React from 'react';
 
-function OutputMessage () {
-
-  const [output, setOutput] = useState([]);
-
-  function createInstructions (string) {
-    ApiService.getMazeOutput({
-      instructions: string
-    })
-    .then(result => setOutput(result))
-  }
-
-  useEffect(() => {
-    createInstructions('n,w')
-  },[]);
+function OutputMessage ( {output} ) {
 
   return (
     <div>

@@ -8,8 +8,8 @@ import ApiService from '../../ApiService';
 
 function MainScreen () {
 
-  const [output, setOutput] = useState([]);
-  const [instructions, setInstructions] = useState('n, e');
+  const [output, setOutput] = useState('');
+  const [instructions, setInstructions] = useState('n, w');
 
   function createInstructions (string) {
     ApiService.getMazeOutput({
@@ -18,9 +18,11 @@ function MainScreen () {
     .then(result => setOutput(result))
   }
 
-  useEffect(() => {
-    createInstructions('n,w')
-  },[]);
+  function handleSubmit (e) {
+    e.preventDefault();
+    createInstructions(instructions);
+    setInstructions('');
+  }
 
   return (
     <div className="main-container">
@@ -41,9 +43,11 @@ function MainScreen () {
         setInstructions={setInstructions}
       />
       <Button
+        handleSubmit={handleSubmit}
+      />
+      <OutputMessage
         output={output}
       />
-      <OutputMessage/>
     </div>
   );
 };

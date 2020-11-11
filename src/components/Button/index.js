@@ -2,11 +2,11 @@ import React from "react";
 import './index.style.scss';
 
 
-function Button () {
+function Button ( { handleSubmit } ) {
 
   return (
     <div>
-      <p>Button</p>
+      <button type="submit" className="form_submit" onClick={handleSubmit}>Submit</button>
     </div>
   );
 };
