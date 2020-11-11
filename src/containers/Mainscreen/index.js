@@ -24,7 +24,8 @@ function MainScreen () {
     if (badinputs.length) {
       setOutput('Please only submit the following characters "n", "w", "e", "s"');
     } else if (instructions.length) {
-      const serverInput = instructions.replace(/[, ]+/g, ",").trim();
+      const formattedInstructions = instructions.split('').join(' ');
+      const serverInput = formattedInstructions.replace(/[, ]+/g, ",").trim();
       createInstructions(serverInput);
       setInstructions('');
     }
