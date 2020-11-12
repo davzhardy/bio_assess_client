@@ -10,6 +10,10 @@ function MainScreen () {
 
   const [output, setOutput] = useState('');
   const [instructions, setInstructions] = useState('');
+  const [showOutput, setShowOutput] = useState(false);
+
+  console.log('inst',instructions)
+  console.log('out',showOutput)
 
   function createInstructions (string) {
     ApiService.getMazeOutput({
@@ -20,6 +24,7 @@ function MainScreen () {
 
   function handleSubmit (e) {
     e.preventDefault();
+    setShowOutput(true);
     const badinputs = instructions.replace(/[, nwes]+/ig, "");
     if (badinputs.length) {
       setOutput('Please only submit the following characters "n", "w", "e", "s"');
@@ -49,12 +54,14 @@ function MainScreen () {
       <Form
         instructions={instructions}
         setInstructions={setInstructions}
+        setShowOutput={setShowOutput}
       />
       <Button
         handleSubmit={handleSubmit}
       />
       <OutputMessage
         output={output}
+        showOutput={showOutput}
       />
     </div>
   );

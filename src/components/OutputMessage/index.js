@@ -1,12 +1,19 @@
 import React from 'react';
 
-function OutputMessage ( {output} ) {
+function OutputMessage ( {output, showOutput} ) {
 
-  return (
-    <div>
-      {output}
-    </div>
-  );
+  if (showOutput) {
+    return (
+      <div>
+        {output}
+      </div>
+    );  
+  } else {
+    return (
+      <div>
+      </div>
+    );
+  }
 };
 
 export default OutputMessage;

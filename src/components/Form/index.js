@@ -2,10 +2,12 @@ import React from "react";
 import './index.style.scss';
 
 
-function Form ( { instructions, setInstructions } ) {
+function Form ( { instructions, setInstructions, setShowOutput } ) {
 
   function handleChange (e) {
-    if (e.target.name === 'instructions') setInstructions(e.target.value);
+    e.preventDefault();
+    setInstructions(e.target.value);
+    setShowOutput(false);
   }
 
   return (
