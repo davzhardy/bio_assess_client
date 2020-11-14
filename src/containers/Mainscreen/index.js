@@ -12,9 +12,6 @@ function MainScreen () {
   const [instructions, setInstructions] = useState('');
   const [showOutput, setShowOutput] = useState(false);
 
-  console.log('inst',instructions)
-  console.log('out',showOutput)
-
   function createInstructions (string) {
     ApiService.getMazeOutput({
       instructions: string
