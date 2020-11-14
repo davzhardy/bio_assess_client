@@ -2,10 +2,10 @@ const PORT = 3001;
 const BASE_URL = `http://localhost:${PORT}`;
 
 function getMazeOutput (instructions) {
-  return fetchRequest('/instructions', {
-    method: 'POST',
+  console.log(instructions)
+  return fetchRequest(`/instructions/${instructions}`, {
+    method: 'GET',
     headers: {'Content-Type': 'application/json'},
-    body: JSON.stringify(instructions)
   })
 }
 

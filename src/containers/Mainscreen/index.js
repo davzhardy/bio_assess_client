@@ -13,9 +13,7 @@ function MainScreen () {
   const [showOutput, setShowOutput] = useState(false);
 
   function createInstructions (string) {
-    ApiService.getMazeOutput({
-      instructions: string
-    })
+    ApiService.getMazeOutput(string)
     .then(result => setOutput(result))
   }
 
