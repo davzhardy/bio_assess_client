@@ -35,6 +35,12 @@ function MainScreen () {
     else setOutput('Please enter instructions before submitting');
   }
 
+  function handleKeydown (e) {
+    if(e.key === 'Enter' && e.shiftKey === false) {
+      handleSubmit(e)
+    }
+  }
+
   return (
     <div className="main-container">
       <Header/>
@@ -53,6 +59,7 @@ function MainScreen () {
         instructions={instructions}
         setInstructions={setInstructions}
         setShowOutput={setShowOutput}
+        handleKeydown={handleKeydown}
       />
       <History
         userHistory={userHistory}

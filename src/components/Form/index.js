@@ -2,7 +2,7 @@ import React from "react";
 import './index.style.scss';
 
 
-function Form ( { instructions, setInstructions, setShowOutput } ) {
+function Form ( { instructions, setInstructions, setShowOutput, handleKeydown } ) {
 
   function handleChange (e) {
     e.preventDefault();
@@ -17,7 +17,8 @@ function Form ( { instructions, setInstructions, setShowOutput } ) {
         className="form_input" 
         name="instructions" 
         value={instructions} 
-        onChange={handleChange} 
+        onChange={handleChange}
+        onKeyDown={handleKeydown}
         placeholder="Type your instructions..."/>
     </div>
   );
