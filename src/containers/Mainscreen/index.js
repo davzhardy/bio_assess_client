@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import './index.style.scss';
-import OutputMessage from '../../components/OutputMessage'
-import Button from '../../components/Button'
-import Form from '../../components/Form'
-import Header from '../../components/Header'
-import History from '../History'
+import OutputMessage from '../../components/OutputMessage';
+import Button from '../../components/Button';
+import Form from '../../components/Form';
+import Header from '../../components/Header';
+import History from '../History';
 import ApiService from '../../ApiService';
 
 function MainScreen () {
@@ -16,7 +16,7 @@ function MainScreen () {
 
   function createInstructions (string) {
     ApiService.getMazeOutput(string)
-    .then(result => setOutput(result))
+      .then(result => setOutput(result));
   }
 
   function handleSubmit (e) {
@@ -66,6 +66,6 @@ function MainScreen () {
       />
     </div>
   );
-};
+}
 
 export default MainScreen;

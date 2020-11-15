@@ -9,6 +9,6 @@ function HistoryItem ( {instructions} ) {
       <p>{instructions}</p>
     </div>
   );
-};
+}
 
 export default HistoryItem;

@@ -9,6 +9,6 @@ function Header () {
       <h1>Welcome to the Destroy Da One Ring game</h1>
     </div>
   );
-};
+}
 
 export default Header;

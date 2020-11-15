@@ -14,6 +14,6 @@ function OutputMessage ( {output, showOutput} ) {
       </div>
     );
   }
-};
+}
 
 export default OutputMessage;

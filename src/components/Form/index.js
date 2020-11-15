@@ -21,6 +21,6 @@ function Form ( { instructions, setInstructions, setShowOutput } ) {
         placeholder="Type your instructions..."/>
     </div>
   );
-};
+}
 
 export default Form;
