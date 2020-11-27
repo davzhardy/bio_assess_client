@@ -2,10 +2,12 @@ import React from "react";
 import './index.style.scss';
 
 
-function Form ( { instructions, setInstructions } ) {
+function Form ( { instructions, setInstructions, setShowOutput, handleKeydown } ) {
 
   function handleChange (e) {
-    if (e.target.name === 'instructions') setInstructions(e.target.value);
+    e.preventDefault();
+    setInstructions(e.target.value);
+    setShowOutput(false);
   }
 
   return (
@@ -15,10 +17,11 @@ function Form ( { instructions, setInstructions } ) {
         className="form_input" 
         name="instructions" 
         value={instructions} 
-        onChange={handleChange} 
+        onChange={handleChange}
+        onKeyDown={handleKeydown}
         placeholder="Type your instructions..."/>
     </div>
   );
-};
+}
 
 export default Form;

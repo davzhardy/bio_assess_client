@@ -9,6 +9,6 @@ function Button ( { handleSubmit } ) {
       <button type="submit" className="form_submit" onClick={handleSubmit}>Submit</button>
     </div>
   );
-};
+}
 
 export default Button;

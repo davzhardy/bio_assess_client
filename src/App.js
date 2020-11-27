@@ -1,7 +1,7 @@
 import './App.css';
-import MainScreen from './containers/Mainscreen'
+import MainScreen from './containers/Mainscreen';
 
-function App() {
+function App () {
 
   return (
     <div className = "App-container">
